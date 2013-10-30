@@ -1,63 +1,52 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/AbsoluteLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0099cc"
     tools:context=".FullscreenActivity" >
 
     <!--
          The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
-         TextureView, etc.
+         TextureView, etc.
     -->
-
-    <TextView
-        android:id="@+id/fullscreen_content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:keepScreenOn="true"
-        android:text="@string/dummy_content"
-        android:textColor="#33b5e5"
-        android:textSize="50sp"
-        android:textStyle="bold" />
 
     <!--
          This FrameLayout insets its children based on system windows using
-         android:fitsSystemWindows.
+         android:fitsSystemWindows.
     -->
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/black_overlay"
-        android:fitsSystemWindows="true" >
+    <TextView
+        android:id="@+id/textBemVindo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="108dp"
+        android:layout_y="22dp"
+        android:text="Bem Vindo"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
-        <LinearLayout
-            android:id="@+id/fullscreen_content_controls"
-            style="?buttonBarStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center_horizontal"
-            android:background="@color/black_overlay"
-            android:orientation="horizontal"
-            tools:ignore="UselessParent" >
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_x="84dp"
+        android:layout_y="332dp"
+        android:text="Login" />
 
-            <Button
-                android:id="@+id/dummy_button"
-                style="?buttonBarButtonStyle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/login" />
-        </LinearLayout>
+    <TextView
+        android:id="@+id/textDesc1Borracharia"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_x="77dp"
+        android:layout_y="217dp"
+        android:text="Localizador de Borracharias" />
 
-        <MediaController
-            android:id="@+id/mediaController1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-        </MediaController>
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="153dp"
+        android:layout_height="165dp"
+        android:layout_x="89dp"
+        android:layout_y="48dp"
+        android:src="@drawable/ic_launcher" />
 
-    </FrameLayout>
-
-</FrameLayout>
+</AbsoluteLayout>
